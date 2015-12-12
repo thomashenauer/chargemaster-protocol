@@ -1,0 +1,3 @@
+Export Leftover Capture Data from Wireshark .pcapng to plain text
+
+tshark -r filename.pcapng -T fields -e usb.capdata > outfile

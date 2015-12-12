@@ -1,0 +1,24 @@
+These are the types of transactions identified:
+
+
+Type    | What does the transaction contain?                    | When is this transaction used?
+Keyword |                                                       |
+--------|-------------------------------------------------------|---------------------------------------------
+5a      | Contains charger settings and battery + cell voltages | First transaction upon most actions,
+        |                                                       | display voltages and setting in charge menu
+--------|-------------------------------------------------------|---------------------------------------------
+57      | Unknown - Probably the charger tpye, hw + fw version  | Is exectued upton connection 
+        |                                                       | (oddly twice with identical contains)
+--------|-------------------------------------------------------|---------------------------------------------
+5f      | Unknown - Something that need updating?               | Is exectued on connection or before any 
+        |                                                       | command
+--------|-------------------------------------------------------|---------------------------------------------
+05      | Start program, Cell type, cell count,                 | Used when starting charging or other action
+        |   action type, currents, cut-off voltages             | 
+--------|-------------------------------------------------------|---------------------------------------------
+55      | Status of running action                              | Is executed every half second during action
+        |   status, voltages, current, capacity, time?          |
+--------|-------------------------------------------------------|---------------------------------------------
+fe      | Stop / End program execution                          | This is sent when pressing the stop button 
+        |                                                       | in the software
+--------|-------------------------------------------------------|---------------------------------------------

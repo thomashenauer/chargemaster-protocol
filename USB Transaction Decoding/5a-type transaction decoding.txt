@@ -1,0 +1,42 @@
+5a-type transaction decoding
+
+packet sent
+        
+        Header
+        |   Length          
+        |   |   Type
+        |   |   |       Type again?
+        |   |   |       |   End Sequence
+        |   |   |       |   |   |
+0000    0f  03  5a  00  5a  ff  ff  00  00  00  00  00  00  00  00  00                             
+0010    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0020    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+
+    
+    packet received
+                                Safty Timer Enable
+                                |   Safty Timer Value in minutes
+                                |   |   |   Capacity Cut-Off Enable
+                                |   |   |   |   Capacity Cut-Off Value in mV
+            Header              |   |   |   |   |   |   Key Beep Enable
+            |   Length          |   |   |   |   |   |   |   Buzzer Enable
+            |   |   Type        |   |   |   |   |   |   |   |   Input Voltage Low Cut-Off in mV
+            |   |   |           |   |   |   |   |   |   |   |   |   |
+    0000    0f  25  5a  00  00  01  00  b4  01  1f  40  01  01  2a  f8  00
+    
+                Protection Temperature in degree celsius
+                |   Battery Voltage in mV
+                |   |   |   Cell 1 Voltage in mV
+                |   |   |   |   |   Cell 2 Voltage in mV
+                |   |   |   |   |   |   |   Cell 3 Voltage in mV
+                |   |   |   |   |   |   |   |   |   Cell 4 Voltage in mV
+                |   |   |   |   |   |   |   |   |   |   |   Cell 5 Voltage in mV
+                |   |   |   |   |   |   |   |   |   |   |   |   |   Cell 6 Voltage in mV
+                |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+    0010    00  50  00  05  01  1a  01  1b  01  24  01  29  01  24  01  2f
+    
+                                        End Sequence
+                                        |   |
+    0020    00  00  00  00  00  00  c3  ff  ff  00  00  00  00  00  00  00                                          
+    0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00

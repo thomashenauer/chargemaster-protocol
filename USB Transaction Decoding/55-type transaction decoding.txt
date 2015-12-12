@@ -1,0 +1,38 @@
+55-type transaction decoding
+
+packet sent
+        
+        Header
+        |   Length          
+        |   |   Type
+        |   |   |       Type again?
+        |   |   |       |   End Sequence
+        |   |   |       |   |   |
+0000    0f  03  55  00  55  ff  ff  00  00  00  00  00  00  00  00  00
+0010    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0020    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+    
+    packet received
+
+            Header
+            |   Length 
+            |   |   Type                                            ~internal Temperature
+            |   |   |                                               |
+    0000    0f  22  55  00  01  00  00  00  02  2f  b1  00  00  00  1d  00
+
+                ~Cell 1 Voltage in mV
+                |   |   ~Cell 2 Voltage in mV
+                |   |   |   |   ~Cell 3 Voltage in mV
+                |   |   |   |   |   |   ~Cell 4 Voltage in mV
+                |   |   |   |   |   |   |   |   ~Cell 5 Voltage in mV
+                |   |   |   |   |   |   |   |   |   |   ~Cell 6 Voltage in mV
+                |   |   |   |   |   |   |   |   |   |   |   |
+    0010    00  10  5b  10  61  10  5f  01  84  01  54  01  4b  52  01  4a
+
+                            End Sequence
+                            |   |   
+    0020    00  01  00  64  ff  ff  8f  ff  ff  00  00  00  00  00  00  00
+    0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+
+    ~ => unconfirmed 

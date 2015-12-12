@@ -1,0 +1,10 @@
+Enable USB capture with Wireshark on Ubuntu
+
+Enable USB monitoring module in kernel
+> sudo modprobe usbmon
+
+Change permissions so that Wireshark sees the USB interfaces
+> sudo chmod 644 /dev/usbmon*
+
+Check if usbmon* interfaces are listed
+> sudo dumpcap -D

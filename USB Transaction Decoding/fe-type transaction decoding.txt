@@ -1,0 +1,25 @@
+fe-type transaction decoding
+
+packet sent
+
+        Header
+        |   Length          
+        |   |   Type
+        |   |   |       Type again?
+        |   |   |       |   End Sequence
+        |   |   |       |   |   |
+0000    0f  03  fe  00  fe  ff  ff  00  00  00  00  00  00  00  00  00
+0010    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0020    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+
+
+    packet received
+
+            Header (note the changed header, something like acknowledge header type?)
+            |   End Sequence
+            |   |   |
+    0000    f0  ff  ff  00  03  00  16  00  df  31  3c  00  00  00  1d  00
+    0010    00  10  6a  10  6e  10  6e  01  84  01  54  01  4b  52  01  4a
+    0020    00  01  00  11  ff  ff  8f  ff  ff  00  00  00  00  00  00  00
+    0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00

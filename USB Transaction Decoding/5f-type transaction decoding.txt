@@ -1,0 +1,29 @@
+5f-type transaction decoding
+
+packet sent
+
+        Header
+        |   Length          
+        |   |   Type
+        |   |   |       Type again?
+        |   |   |       |   End Sequence
+        |   |   |       |   |   |
+0000    0f  03  5f  00  5f  ff  ff  00  00  00  00  00  00  00  00  00
+0010    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0020    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
+
+
+    packet received
+
+            Header
+            |   Length 
+            |   |   Type 
+            |   |   |  
+    0000    0f  0f  5f  00  02  00  00  00  64  14  01  02  0e  07  ff  ff
+    
+                End Sequence
+                |   |
+    0010    ef  ff  ff  09  bb  57  ff  ff  01  24  01  29  01  24  01  2f
+    0020    00  00  00  00  00  00  c3  ff  ff  00  00  00  00  00  00  00
+    0030    00  00  00  00  00  00  00  00  00  00  00  00  00  00  00  00
