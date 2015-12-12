@@ -2,7 +2,8 @@ README DischargeCommand_noBattery_measNr1
 
 No battery connected
 
-Command failed with error (there are different error codes, this was (probably) "connect error check main port")
+Command failed with error (there are different error codes, 
+this was (probably) "connect error check main port")
 
 Command Parameters
 Type:               Discharge

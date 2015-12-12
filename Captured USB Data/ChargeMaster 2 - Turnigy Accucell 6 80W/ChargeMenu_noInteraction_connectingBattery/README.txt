@@ -1,6 +1,8 @@
 Additional Info
 
-!!! Attention !!!: Battery Voltage is shown as 11.78V instead of the correct 12.28V. This is a bug in the charger. If the charger is in the Battery Monitoring Menu the battery voltage is correctly transmitted to the PC
+!!! Attention !!!: Battery Voltage is shown as 11.78V instead of the correct 12.28V. 
+This is a bug in the charger. If the charger is in the Battery Monitoring Menu 
+the battery voltage is correctly transmitted to the PC
 
 Battery Type: 		LiPo 3cell 
 Cell Voltage: 		4.11V
