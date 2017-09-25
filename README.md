@@ -14,5 +14,3 @@ Currently the work is conducted with a Turnigy Accucell-6 80W battery charger (a
 Tested Chargers:
 -Turnigy Accucel-6 80W 10A Balancer/Charger LiHV Capable
     Product ID: 9052000071-0 (from HobbyKing Website)
-
-Status: The next activity on this repository will most likely not be before spring 2016.
